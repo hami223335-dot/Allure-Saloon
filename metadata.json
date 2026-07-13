@@ -1,0 +1,6 @@
+{
+  "name": "Allure Salon & Spa",
+  "description": "A premium, modern, luxury salon and spa multi-page experience featuring hair styling, beauty therapies, and professional wellness services with a high-end dark/light theme, cinematic transitions, and interactive features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

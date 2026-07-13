@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  
+  --color-gold-50: #fbf7eb;
+  --color-gold-100: #f5ebd0;
+  --color-gold-200: #ecd29b;
+  --color-gold-300: #e0b462;
+  --color-gold-400: #d59738;
+  --color-gold-500: #c5802b;
+  --color-gold-600: #a76420;
+  --color-gold-700: #864a1b;
+  --color-gold-800: #6a3a19;
+  --color-gold-900: #573017;
+  --color-gold-950: #32190b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    background-color: #0c0c0c;
+    color: #f5ebd0;
+    overflow-x: hidden;
+  }
+
+  /* Custom luxurious scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060606;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #d59738, #a76420);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e0b462;
+  }
+}
+
+/* Custom premium styles */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fbf7eb 0%, #e0b462 50%, #a76420 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-bg-gradient {
+  background: linear-gradient(135deg, #ecd29b 0%, #c5802b 50%, #864a1b 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #ecd29b, #a76420, #32190b) 1;
+}
+
+.glass-card-dark {
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 180, 98, 0.15);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 128, 43, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(224, 180, 98, 0.25);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px rgba(224, 180, 98, 0.45);
+}
+
+/* Smooth shimmering loading animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-loading {
+  background: linear-gradient(90deg, #161616 25%, #2a2a2a 50%, #161616 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Premium page animations */
+.slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Luxury particle effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+.float-animation-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
